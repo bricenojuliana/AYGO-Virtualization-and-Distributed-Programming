@@ -1,0 +1,29 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${DOCKERHUB_USER:-julianabriceno}/arrivals-monolith:1.0
+    container_name: arrivals-monolith
+    environment:
+      PORT: 9000
+      SPRING_MONGODB_URI: mongodb://db:27017/arrivals
+    ports:
+      - "8087:9000"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  # No "ports": MongoDB is only reachable from the Compose internal network.
+  db:
+    image: mongo:8
+    container_name: arrivals-db
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    command: mongod
+    restart: unless-stopped
+
+volumes:
+  mongodb:
+  mongodb_config:
