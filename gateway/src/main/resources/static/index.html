@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arrival Log</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+    <h1>Arrival Log</h1>
+
+    <form id="arrival-form">
+        <label for="name">Name</label>
+        <div class="row">
+            <input id="name" name="name" type="text" maxlength="100" autocomplete="off" required>
+            <button type="submit">Submit</button>
+        </div>
+        <p id="message" role="status"></p>
+    </form>
+
+    <h2>Arrivals</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Arrival time</th>
+        </tr>
+        </thead>
+        <tbody id="arrivals"></tbody>
+    </table>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
