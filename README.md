@@ -411,6 +411,6 @@ journalctl -u gateway
 
 ## Video
 
-The deployment process and the application working (registering names and retrieving the arrival list) are shown in this video:
+This video walks through the full deployment on AWS: creating the Security Groups and the two EC2 instances, installing Docker and Docker Compose, starting the monolith and MongoDB containers, and setting up the gateway as a systemd service. It ends with the application running, registering names and retrieving the arrival list.
 
-**[Watch the video](<VIDEO_URL>)**
+**[Watch the video](https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/juliana_briceno_mail_escuelaing_edu_co/IQBb7GnsmfjlQLdUtrdbiC6FASS4ISgOcbyN-GWcxPWDT8g?e=UIuMDG&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)**
